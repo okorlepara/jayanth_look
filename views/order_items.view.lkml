@@ -28,6 +28,7 @@ view: order_items {
     type: number
     # hidden: yes
     sql: ${TABLE}.order_id ;;
+    html:   <font color="orange">{{ value }}</font>;;
   }
 
   dimension: phone {
