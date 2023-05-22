@@ -108,7 +108,7 @@ explore: incremental_pdts_test {}
 explore: ints {}
 
 explore: inventory_items {
-  sql_always_where: ${created_date} >= '2019-12-09' ;;
+  sql_always_where: ${created_date} >= '2019-12-05' ;;
   join: products {
     type: left_outer
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
