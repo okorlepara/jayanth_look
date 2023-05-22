@@ -21,6 +21,7 @@ view: order_items {
     type: number
     # hidden: yes
     sql: ${TABLE}.inventory_item_id ;;
+    html:   <font color="green">{{ value }}</font>;;
   }
 
   dimension: order_id {
