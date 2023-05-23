@@ -68,6 +68,10 @@ view: users {
   dimension: email {
     type: string
     sql: ${TABLE}.email ;;
+    link: {
+      label: "Mail_link"
+      url: "okorlepara@google.com"
+    }
   }
 
   dimension: first_name {
