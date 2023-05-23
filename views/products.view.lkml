@@ -20,6 +20,7 @@ view: products {
   dimension: brand {
     type: string
     sql: ${TABLE}.brand ;;
+    html:   <font color="green">{{ value }}</font>;;
   }
 
   dimension: category {
@@ -53,7 +54,14 @@ view: products {
 
   measure: total_retail_price {
     type: sum
-    sql: ${retail_price} ;;
+    html:
+    {% if value > 500 %}
+    <font style="color: red; font-size: 100%">{{ rendered_value }}</font>
+    {% elsif value >300 %}
+    <font style="color: blue; font-size:80%">{{ rendered_value }}</font>
+    {% else %}
+    <font style="color: black; font-size:50%">{{ rendered_value }}</font>
+    {% endif %};;
   }
 
   measure: average_retail_price {
