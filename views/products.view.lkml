@@ -62,6 +62,7 @@ view: products {
     {% else %}
     <font style="color: black; font-size:50%">{{ rendered_value }}</font>
     {% endif %};;
+    sql: ${retail_price} ;;
   }
 
   measure: average_retail_price {
